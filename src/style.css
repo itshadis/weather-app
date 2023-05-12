@@ -1,0 +1,233 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  background-image: url('/img/bg.jpg');
+  background-size: cover;
+}
+
+.container {
+  width: 75%;
+  height: 500px;
+  background-color: rgb(255, 255, 255, 0.5);
+  backdrop-filter: blur(2px);
+  margin: 75px auto;
+  border-radius: 20px;
+}
+
+.input-group {
+  width: 195px;
+  padding-top: 10px;
+  margin: 20px auto;
+  border-bottom: 1px solid black;
+}
+
+.input-search, .input-search:focus {
+  width: 160px;
+  outline: none;
+  margin-bottom: 4px;
+  display: inline-block;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.button-search {
+  cursor: pointer;
+  background-color: transparent;
+  transform: translateY(5px);
+}
+
+.content {
+  color: rgb(39, 39, 39);
+  margin: 0 20px;
+  width: 100%;
+  height: 350px;
+  margin-top: 44px;
+  display: flex;
+  visibility: hidden;
+}
+
+.main-weather {
+  flex-direction: column;
+  width: 250px;
+  text-align: center;
+  padding: 0 25px;
+  border-right: 1px solid black;
+}
+
+.list-main li {
+  margin: 18px 0;
+}
+
+.timezone {
+  font-size: 20px;
+}
+
+.temp {
+  font-size: 96px;
+  font-weight: bold;
+}
+
+.deg {
+  position: absolute;
+  font-weight: bold;
+  font-size: 20px;
+  bottom: 170px;
+}
+
+.list-today {
+  font-size: 20px;
+}
+
+.fl {
+  margin: 0;
+}
+
+.aside-weather {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  justify-content: space-evenly;
+}
+
+.list-weather {
+  display: flex;
+  font-size: 20px;
+  padding: 24px 30px 10px 10px;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
+}
+
+.list-content {
+  margin-left: 15px;
+  margin-top: 16px;
+  font-size: 20px;
+}
+
+.info {
+  font-weight: bold;
+}
+
+.spin {
+  position: absolute;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  right: 470px;
+  top: 200px;
+  border: 20px solid white;
+  border-top: 20px solid rgb(0, 0, 0, 0.5);
+  border-radius: 100%;
+  margin: auto;
+  animation: spinner 1s infinite linear;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  .spin {
+    width: 50px;
+    height: 50px;
+    right: 170px;
+  }
+
+  .container {
+    margin-top: 30px;
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+    padding: 0;
+    margin: auto;
+  }
+
+  .list-today {
+    font-size: 16px;
+  }
+
+  .timezone {
+    font-size: 16px;
+  }
+
+  
+  .temp {
+   font-size: 72px;
+  }
+
+  .deg {
+    margin-left: 5px;
+    top: 130px;
+  }
+
+  .content {
+    display: block;
+    align-items: center;
+    font-size: smaller;
+    margin: 0 auto;
+  }
+
+  .main-weather {
+    border-right: none;
+    border-bottom: 1px solid black;
+    width: 430px;
+    align-items: center;
+    padding: 0;
+  }
+
+  .list-main {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+  }
+
+  .place {
+    position: absolute;
+    top: 40px;
+    left: 180px;
+    font-size: 16px;
+  }
+
+  .list-main-left {
+    margin-top: 24px;
+  }
+
+  .list-main-right {
+    margin-top: 45px;
+
+  }
+
+  .fl {
+    font-size: 14px;
+  }
+  
+  .list-weather {
+    padding: 15px 20px;
+  }
+
+  .list-content {
+    margin: 5px 0 0 5px;
+    font-size: 16px;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast v.2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="spin"></div>
+    <div class="input-group">
+      <input type="text" class="input-search" placeholder="Search City..">
+      <button class="button-search">
+        <img src="img/search-icon.svg" alt="">
+      </button>
+    </div>
+
+    <div class="content">
+      <div class="main-weather">
+          <ul class="list-main">
+            <div class="list-main-left">
+              <li class="place"></li>
+              <li class="list-today"><h1>Today</h1></li>
+              <li class="">
+                <img src="" class="iconurl">
+              </li>
+              <li class="timezone"></li>
+            </div>
+            <div class="list-main-right">
+              <li class="temp-deg">
+                <span class="temp"></span>
+                <span class="deg"></span>
+              </li>
+              <li class="fl">Feels like <span class="feels-like"></span>&degC</li>
+            </div>
+          </ul>
+      </div>
+
+      <div class="aside-weather">
+        <div class="list-weather">
+          <img class="icon" src="img/wind.png" alt="wind-icon">
+          <div class="list-content">
+            <p>wind</p>
+            <span class="info-wind info"></span>
+          </div>
+        </div>
+        <div class="list-weather">
+          <img class="icon" src="img/water-drop.png" alt="humidity-icon">
+          <div class="list-content">
+            <p>humadity</p>
+            <span class="info-humidity info"></span>
+          </div>
+        </div>
+        <div class="list-weather">
+          <img class="icon" src="img/pressure.png" alt="pressure-icon">
+          <div class="list-content">
+            <p>pressure</p>
+            <span class="info-pressure info"></span>
+          </div>
+        </div>
+        <div class="list-weather">
+          <img class="icon img-fluid" src="img/sunrise.png" alt="sunrise-icon">
+          <div class="list-content">
+            <p>sunrise</p>
+            <span class="info-sunrise info"></span>
+          </div>
+        </div>
+        <div class="list-weather">
+          <img class="icon" src="img/sunset.png" alt="sunset-icon">
+          <div class="list-content">
+            <p>sunset</p>
+            <span class="info-sunset info"></span>
+          </div>
+        </div>
+        <div class="list-weather">
+          <img class="icon" src="img/witness.png" alt="visibility-icon">
+          <div class="list-content">
+            <p>visibility</p>
+            <span class="info-visibility info"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="src/script.js"></script>
+</body>
+</html>
