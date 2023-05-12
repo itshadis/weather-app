@@ -15,7 +15,7 @@ body {
 .container {
   width: 75%;
   height: 500px;
-  background-color: rgb(255, 255, 255, 0.5);
+  background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.5), rgba(236, 236, 236, 0.9));
   backdrop-filter: blur(2px);
   margin: 75px auto;
   align-items: center;
@@ -23,8 +23,8 @@ body {
 }
 
 .input-group {
-  width: 195px;
-  padding-top: 10px;
+  width: 150px;
+  padding-top: 20px;
   margin: 20px auto;
   border-bottom: 1px solid black;
 }
@@ -38,11 +38,11 @@ body {
   font-size: 16px;
 }
 
-.button-search {
+/* .button-search {
   cursor: pointer;
   background-color: transparent;
   transform: translateY(5px);
-}
+} */
 
 .content {
   color: rgb(39, 39, 39);
@@ -123,7 +123,7 @@ body {
   z-index: 10;
   width: 100px;
   height: 100px;
-  right: 470px;
+  right: 440px;
   top: 200px;
   border: 20px solid white;
   border-top: 20px solid rgb(0, 0, 0, 0.5);
@@ -142,6 +142,39 @@ body {
   }
 }
 
+@media screen and (max-width: 880px) {
+  .spin {
+    right: 220px;
+  }
+
+  .list-weather {
+    padding: 0;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .spin {
+    right: 370px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .spin{
+    right: 290px;
+  }
+}
+
+@media screen and (max-width: 504px) {
+  .main-weather {
+    width: 360px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   
   .spin {
@@ -157,6 +190,7 @@ body {
   .input-group {
     margin-bottom: 20px;
     padding: 0;
+    padding-top: 20px;
     margin: auto;
   }
 
@@ -188,8 +222,8 @@ body {
   .main-weather {
     border-right: none;
     border-bottom: 1px solid black;
-    width: 430px;
-    align-items: center;
+    width: 400px;
+    margin: 0 auto;
     padding: 0;
   }
 
@@ -244,7 +278,7 @@ body {
   }
 
   .input-group {
-    padding-top: 5px;
+    padding-top: 10px;
   }
 
   .content {
@@ -252,10 +286,12 @@ body {
   }
 
   .main-weather {
-    width: 310px;
+    width: 270px;
   }
+  
 
   .list-main {
+    width: 270px;
     padding-top: 15px;
   }
 
@@ -264,6 +300,7 @@ body {
   }
 
   .aside-weather{
+    margin-top: 20px;
     height: 200px;
   }
 
@@ -279,8 +316,13 @@ body {
 }
 
 @media screen and (max-width: 393px) {
+
+  .input-group {
+    padding-top: 10px;
+  }
+
   .content {
-    width: 270px;
+    width: 300px;
   }
 
   .main-weather {
@@ -294,5 +336,43 @@ body {
   .list-weather {
     padding: 0;
     margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .input-group {
+    padding-top: 20px;
+  }
+  .spin {
+    right: 120px;
+  }
+
+  .input-group {
+    padding-top: 10px;
+  }
+
+  .main-weather {
+    margin: 0 auto;
+    width: 270px;
+  }
+
+  .place {
+    left: 120px;
+  }
+
+  .list-weather {
+    padding: 0;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .main-weather{
+    margin: 5px 0;
+    width: 260px;
+  }
+  
+  .place {
+    left: 100px;
   }
 }

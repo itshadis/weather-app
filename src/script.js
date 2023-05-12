@@ -1,3 +1,5 @@
+// alert('Allow location to this app');
+
 const contentContainer = document.querySelector('.content');
 
 // start get weather current location
@@ -14,7 +16,12 @@ async function success(pos) {
 }
 
 function error(err) {
-  console.warn(`Error ${err.code}, ${err.message}`);
+  if(err.code == 1) {
+    alert(`Error ${err.code}, ${err.message}`);
+  }
+  hideLoader();
+  document.querySelector('.content').style.visibility = 'visible';
+  return response.results[0].locations[0].adminArea5;
 }
 
 navigator.geolocation.getCurrentPosition(success, error);
@@ -115,15 +122,17 @@ function getDate() {
 
 
 // get weather input user based
-const search = document.querySelector('.button-search');
-search.addEventListener('click', async function() {
-  try {
-    const inputSearch = document.querySelector('.input-search');
-    const todayWeather = await getTodayWeather(inputSearch.value);
-    updateUITodayWeather(todayWeather);
-    inputSearch.value = '';
-  } catch (err) {
-    alert(err);
+const search = document.querySelector('.input-search');
+search.addEventListener('keypress', async function(e) {
+  if (e.key === 'Enter') {
+    try {
+      const inputSearch = document.querySelector('.input-search');
+      const todayWeather = await getTodayWeather(inputSearch.value);
+      updateUITodayWeather(todayWeather);
+      inputSearch.value = '';
+    } catch (err) {
+      alert(err);
+    }
   }
 });
 
