@@ -7,8 +7,9 @@
 }
 
 body {
+  background-color: rgba(45, 54, 105, 0.5);
   background-image: url('/img/bg.jpg');
-  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -17,6 +18,7 @@ body {
   background-color: rgb(255, 255, 255, 0.5);
   backdrop-filter: blur(2px);
   margin: 75px auto;
+  align-items: center;
   border-radius: 20px;
 }
 
@@ -229,5 +231,65 @@ body {
   .icon {
     width: 50px;
     height: 50px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  
+  .container {
+    margin: 20px auto;
+  }
+
+  .input-group {
+    padding-top: 5px;
+  }
+
+  .content {
+    height: 500px;
+  }
+
+  .main-weather {
+    width: 310px;
+  }
+
+  .list-main {
+    padding-top: 15px;
+  }
+
+  .place {
+    left: 100px;
+  }
+
+  .aside-weather{
+    height: 200px;
+  }
+
+  .list-weather{
+    margin: 0;
+    padding: 10 10px;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 393px) {
+  .content {
+    width: 270px;
+  }
+
+  .main-weather {
+    width: 270px;
+  }
+
+  .aside-weather {
+    width: 270px;
+  }
+  
+  .list-weather {
+    padding: 0;
+    margin-top: 20px;
   }
 }
