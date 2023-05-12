@@ -235,7 +235,10 @@ body {
 }
 
 @media screen and (max-width: 414px) {
-  
+  .spin {
+    left: 100px;
+  }
+
   .container {
     margin: 20px auto;
   }
