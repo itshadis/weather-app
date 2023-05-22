@@ -157,6 +157,13 @@ body {
   }
 }
 
+
+@media screen and (min-width: 1336px) {
+  .aside-weather {
+    column-gap: 30px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .spin {
     right: 370px;
